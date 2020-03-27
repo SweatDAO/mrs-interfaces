@@ -1,6 +1,6 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/flipper-mom/blob/master/src/FlipperMom.sol
+// https://github.com/sweatdao/flipper-mom/blob/master/src/FlipperMom.sol
 contract FlipperMomAbstract {
     function owner() public returns (address);
     function setOwner(address) external;

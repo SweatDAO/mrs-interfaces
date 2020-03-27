@@ -1,6 +1,6 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/dss/blob/master/src/jug.sol
+// https://github.com/sweatdao/mrs/blob/master/src/jug.sol
 contract JugAbstract {
     function wards(address) public view returns (uint256);
     function rely(address) external;

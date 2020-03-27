@@ -1,19 +1,19 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
 import { PotAbstract } from "./PotAbstract.sol";
 
-// https://github.com/makerdao/dss/blob/master/src/pot.sol
+// https://github.com/sweatdao/mrs/blob/master/src/pot.sol
 contract PotHelper {
 
     PotAbstract pa;
-    
+
     constructor(address pot) public {
         pa = PotAbstract(pot);
     }
 
-    // https://github.com/makerdao/dss/blob/master/src/pot.sol#L79
+    // https://github.com/sweatdao/mrs/blob/master/src/pot.sol#L79
     uint256 constant ONE = 10 ** 27;
-    
+
     function mul(uint x, uint y) internal pure returns (uint z) {
         require(y == 0 || (z = x * y) / y == x);
     }
@@ -49,7 +49,7 @@ contract PotHelper {
     // View function for calculating value of chi iff drip() is called in the same block.
     function drop() external view returns (uint256) {
         if (now == pa.rho()) return pa.chi();
-        return rmul(rpow(pa.dsr(), now - pa.rho(), ONE), pa.chi());
+        return rmul(rpow(pa.msr(), now - pa.rho(), ONE), pa.chi());
     }
 
     // Pass the Pot Abstract for additional operations

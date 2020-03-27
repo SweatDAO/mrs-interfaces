@@ -1,6 +1,6 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/osm
+// https://github.com/sweatdao/osm
 contract OsmAbstract {
     function wards(address) public view returns (uint256);
     function rely(address) external;

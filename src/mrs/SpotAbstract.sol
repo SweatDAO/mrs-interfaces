@@ -1,6 +1,6 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/dss/blob/master/src/spot.sol
+// https://github.com/sweatdao/mrs/blob/master/src/spot.sol
 contract SpotAbstract {
     function wards(address) public view returns (uint256);
     function rely(address) external;

@@ -1,5 +1,5 @@
-name            dss-interfaces
-description     Abstract contracts for the Dai Stablecoin System
+name            mrs-interfaces
+description     Abstract contracts for the Mai Reflex-Bond System
 version         0.0.1
 
 author          brianmcmichael

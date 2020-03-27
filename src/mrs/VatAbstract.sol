@@ -1,6 +1,6 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/dss/blob/master/src/vat.sol
+// https://github.com/sweatdao/mrs/blob/master/src/vat.sol
 contract VatAbstract {
     function wards(address) public view returns (uint256);
     function rely(address) external;
@@ -8,10 +8,10 @@ contract VatAbstract {
     function can(address, address) public view returns (uint256);
     function hope(address) external;
     function nope(address) external;
-    function ilks(bytes32) external view returns (uint256, uint256, uint256, uint256, uint256);
+    function ilks(bytes32) external view returns (uint256, uint256, uint256, uint256, uint256, uint256);
     function urns(bytes32, address) public view returns (uint256, uint256);
     function gem(bytes32, address) public view returns (uint256);
-    function dai(address) public view returns (uint256);
+    function mai(address) public view returns (uint256);
     function sin(address) public view returns (uint256);
     function debt() public view returns (uint256);
     function vice() public view returns (uint256);

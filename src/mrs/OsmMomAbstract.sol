@@ -1,7 +1,6 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-
-// https://github.com/makerdao/osm-mom
+// https://github.com/sweatdao/osm-mom
 contract OsmMomAbstract {
     function owner() public view returns (address);
     function authority() public view returns (address);

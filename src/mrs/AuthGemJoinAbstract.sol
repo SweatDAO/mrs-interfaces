@@ -1,6 +1,6 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/dss-deploy/blob/master/src/join.sol
+// https://github.com/sweatdao/mrs-deploy/blob/master/src/join.sol
 contract AuthGemJoinAbstract {
     function vat() public view returns (address);
     function ilk() public view returns (bytes32);

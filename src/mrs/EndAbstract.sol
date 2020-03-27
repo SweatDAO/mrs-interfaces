@@ -1,6 +1,6 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/dss/blob/master/src/end.sol
+// https://github.com/sweatdao/mrs/blob/master/src/end.sol
 contract EndAbstract {
     function wards(address) public view returns (uint256);
     function rely(address) external;
@@ -9,6 +9,7 @@ contract EndAbstract {
     function cat() public view returns (address);
     function vow() public view returns (address);
     function pot() public view returns (address);
+    function vox() public view returns (address);
     function spot() public view returns (address);
     function live() public view returns (uint256);
     function when() public view returns (uint256);

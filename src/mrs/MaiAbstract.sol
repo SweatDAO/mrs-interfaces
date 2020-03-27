@@ -1,7 +1,7 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/dss/blob/master/src/dai.sol
-contract DaiAbstract {
+// https://github.com/sweatdao/mrs/blob/master/src/mai.sol
+contract MaiAbstract {
     function wards(address) public view returns (uint256);
     function rely(address) external;
     function deny(address) external;

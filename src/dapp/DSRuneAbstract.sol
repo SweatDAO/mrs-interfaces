@@ -13,9 +13,9 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/dss-spellbook
+// https://github.com/sweatdao/mrs-spellbook
 contract DSRuneAbstract {
     // @return [address] A contract address conforming to DSPauseAbstract
     function pause()    public view returns (address);

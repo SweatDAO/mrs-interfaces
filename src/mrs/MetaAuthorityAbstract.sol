@@ -1,7 +1,7 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/mkr-authority/blob/master/src/MkrAuthority.sol
-contract MkrAuthorityAbstract {
+// https://github.com/sweatdao/meta-authority/blob/master/src/MetaAuthority.sol
+contract MetaAuthorityAbstract {
     function root() public returns (address);
     function setRoot(address) public;
     function wards(address) public returns (uint256);

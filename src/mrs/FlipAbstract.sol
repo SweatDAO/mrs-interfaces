@@ -1,12 +1,15 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/dss/blob/master/src/flip.sol
+// https://github.com/sweatdao/mrs/blob/master/src/flip.sol
 contract FlipAbstract {
     function wards(address) public view returns (uint256);
     function rely(address usr) external;
     function deny(address usr) external;
     function bids(uint256) public view returns (uint256, uint256, address, uint48, uint48, address, address, uint256);
     function vat() public view returns (address);
+    function spot() public view returns (address);
+    function feed() public view returns (address);
+    function cut() public view returns (uint256);
     function ilk() public view returns (bytes32);
     function beg() public view returns (uint256);
     function ttl() public view returns (uint48);

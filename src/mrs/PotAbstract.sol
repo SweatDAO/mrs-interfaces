@@ -1,13 +1,13 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
-// https://github.com/makerdao/dss/blob/master/src/pot.sol
+// https://github.com/sweatdao/mrs/blob/master/src/pot.sol
 contract PotAbstract {
     function wards(address) public view returns (uint256);
     function rely(address) external;
     function deny(address) external;
     function pie(address) public view returns (uint256);
     function Pie() public view returns (uint256);
-    function dsr() public view returns (uint256);
+    function msr() public view returns (uint256);
     function chi() public view returns (uint256);
     function vat() public view returns (address);
     function vow() public view returns (address);

@@ -1,4 +1,4 @@
-pragma solidity ^0.5.12;
+pragma solidity ^0.5.15;
 
 // https://github.com/dapphub/ds-value/blob/master/src/value.sol
 contract DSValueAbstract {
