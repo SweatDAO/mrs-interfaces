@@ -1,10 +1,10 @@
 pragma solidity ^0.5.15;
 
-// https://github.com/sweatdao/mrs/blob/master/src/mai.sol
-contract MaiAbstract {
-    function wards(address) public view returns (uint256);
-    function rely(address) external;
-    function deny(address) external;
+// https://github.com/reflexer-labs/geb/blob/master/src/Coin.sol
+contract CoinAbstract {
+    function authorizedAccounts(address) public view returns (uint256);
+    function addAuthorization(address) external;
+    function removeAuthorization(address) external;
     function name() public view returns (string memory);
     function symbol() public view returns (string memory);
     function version() public view returns (string memory);

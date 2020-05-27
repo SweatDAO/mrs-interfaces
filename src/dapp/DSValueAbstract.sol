@@ -1,13 +1,13 @@
 pragma solidity ^0.5.15;
 
-// https://github.com/dapphub/ds-value/blob/master/src/value.sol
+// https://github.com/reflexer-labs/ds-value/blob/master/src/value.sol
 contract DSValueAbstract {
-    function has() public view returns (bool);
-    function val() public view returns (bytes32);
-    function peek() public view returns (bytes32, bool);
+    function isValid() public view returns (bool);
+    function result() public view returns (bytes32);
+    function getResultWithValidity() public view returns (bytes32, bool);
     function read() public view returns (bytes32);
-    function poke(bytes32) public;
-    function void() public;
+    function updateResult(bytes32) public;
+    function restartValue() public;
     function authority() public view returns (address);
     function owner() public view returns (address);
     function setOwner(address) public;

@@ -1,5 +1,5 @@
-name            mrs-interfaces
-description     Abstract contracts for the Mai Reflex-Bond System
+name            geb-interfaces
+description     Abstract contracts for GEB
 version         0.0.1
 
 author          brianmcmichael
