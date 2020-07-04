@@ -1,3 +1,5 @@
+# geb-interfaces
+
 Provides programmatic interfaces for GEB core contracts.
 
 Import all GEB abstract contracts
@@ -25,7 +27,7 @@ import "lib/geb-interfaces/src/mrs/CDPEngineAbstract.sol";
 ```
 import { CDPEngineAbstract } from "./Interfaces.sol";
 
-pragma solidity ^0.5.15;
+pragma solidity ^0.6.7;
 
 contract Testerface {
 
