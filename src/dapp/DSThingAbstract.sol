@@ -1,9 +1,9 @@
-pragma solidity ^0.5.15;
+pragma solidity ^0.6.7;
 
-// https://github.com/dapphub/ds-thing
-contract DSThingAbstract {
-    function authority() public view returns (address);
-    function owner() public view returns (address);
-    function setOwner(address) public;
-    function setAuthority(address) public;
+// https://github.com/reflexer-labs/ds-thing
+abstract contract DSThingAbstract {
+    function authority() virtual public view returns (address);
+    function owner() virtual public view returns (address);
+    function setOwner(address) virtual public;
+    function setAuthority(address) virtual public;
 }

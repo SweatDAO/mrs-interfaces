@@ -29,15 +29,15 @@ import { CDPEngineAbstract } from "./Interfaces.sol";
 
 pragma solidity ^0.6.7;
 
-contract Testerface {
+abstract contract Testerface {
 
     CDPEngineAbstract _cdpEngine;
 
-    constructor() public {
+    constructor() virtual public {
         _cdpEngine = CDPEngineAbstract(0xbA987bDB501d131f766fEe8180Da5d81b34b69d9);
     }
 
-    function viewDebt() public view returns (uint256) {
+    function viewDebt() virtual public view returns (uint256) {
         return _cdpEngine.globalDebt();
     }    
 }

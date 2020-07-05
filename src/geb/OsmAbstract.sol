@@ -1,27 +1,26 @@
-pragma solidity ^0.5.15;
+pragma solidity ^0.6.7;
 
 // https://github.com/reflexer-labs/geb-fsm
-contract OsmAbstract {
-    function authorizedAccounts(address) public view returns (uint256);
-    function addAuthorization(address) external;
-    function removeAuthorization(address) external;
-    function stopped() public view returns (uint256);
-    function priceSource() public view returns (address);
-    function updateDelay() public view returns (uint16);
-    function lastUpdateTime() public view returns (uint64);
-    function currentFeed() public view returns (uint128, uint128);
-    function nextFeed() public view returns (uint128, uint128);
-    function bud(address) public view returns (uint256);
-    function stop() external;
-    function start() external;
-    function changePriceSource(address) external;
-    function changeDelay(uint16) external;
-    function restartValue() external;
-    function passedDelay() public view returns (bool);
-    function updateResult() external;
-    function getResultWithValidity() external view returns (bytes32, bool);
-    function getNextResultWithValidity() external view returns (bytes32, bool);
-    function read() external view returns (bytes32);
-    function addOracles(address[] calldata) external;
-    function removeOracles(address[] calldata) external;
+abstract contract OsmAbstract {
+    function authorizedAccounts(address) virtual public view returns (uint256);
+    function addAuthorization(address) virtual external;
+    function removeAuthorization(address) virtual external;
+    function stopped() virtual public view returns (uint256);
+    function priceSource() virtual public view returns (address);
+    function updateDelay() virtual public view returns (uint16);
+    function lastUpdateTime() virtual public view returns (uint64);
+    function currentFeed() virtual public view returns (uint128, uint128);
+    function nextFeed() virtual public view returns (uint128, uint128);
+    function stop() virtual external;
+    function start() virtual external;
+    function changePriceSource(address) virtual external;
+    function changeDelay(uint16) virtual external;
+    function restartValue() virtual external;
+    function passedDelay() virtual public view returns (bool);
+    function updateResult() virtual external;
+    function getResultWithValidity() virtual external view returns (bytes32, bool);
+    function getNextResultWithValidity() virtual external view returns (bytes32, bool);
+    function read() virtual external view returns (bytes32);
+    function addOracles(address[] calldata) virtual external;
+    function removeOracles(address[] calldata) virtual external;
 }

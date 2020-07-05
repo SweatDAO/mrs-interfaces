@@ -1,16 +1,16 @@
-pragma solidity ^0.5.15;
+pragma solidity ^0.6.7;
 
 // https://github.com/reflexer-labs/geb/blob/master/src/BasicTokenAdapters.sol
-contract CollateralJoinAbstract {
-    function authorizedAccounts(address) public view returns (uint256);
-    function addAuthorization(address) external;
-    function removeAuthorization(address) external;
-    function cdpEngine() public view returns (address);
-    function collateralType() public view returns (bytes32);
-    function collateral() public view returns (address);
-    function decimals() public view returns (uint256);
-    function contractEnabled() public view returns (uint256);
-    function disableContract() external;
-    function join(address, uint256) external;
-    function exit(address, uint256) external;
+abstract contract CollateralJoinAbstract {
+    function authorizedAccounts(address) virtual public view returns (uint256);
+    function addAuthorization(address) virtual external;
+    function removeAuthorization(address) virtual external;
+    function cdpEngine() virtual public view returns (address);
+    function collateralType() virtual public view returns (bytes32);
+    function collateral() virtual public view returns (address);
+    function decimals() virtual public view returns (uint256);
+    function contractEnabled() virtual public view returns (uint256);
+    function disableContract() virtual external;
+    function join(address, uint256) virtual external;
+    function exit(address, uint256) virtual external;
 }

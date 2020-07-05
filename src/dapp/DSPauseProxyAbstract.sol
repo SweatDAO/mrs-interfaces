@@ -1,7 +1,7 @@
-pragma solidity ^0.5.15;
+pragma solidity ^0.6.7;
 
-// https://github.com/dapphub/ds-pause
-contract DSPauseProxyAbstract {
-    function owner() public view returns (address);
-    function exec(address, bytes memory) public returns (bytes memory);
+// https://github.com/reflexer-labs/ds-pause
+abstract contract DSPauseProxyAbstract {
+    function owner() virtual public view returns (address);
+    function executeTransaction(address, bytes memory) virtual public returns (bytes memory);
 }
