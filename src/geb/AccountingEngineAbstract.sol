@@ -8,6 +8,7 @@ abstract contract AccountingEngineAbstract {
     function cdpEngine() virtual public view returns (address);
     function surplusAuctionHouse() virtual public view returns (address);
     function debtAuctionHouse() virtual public view returns (address);
+    function protocolTokenAuthority() virtual public view returns (address);
     function postSettlementSurplusDrain() virtual public view returns (address);
     function debtQueue(uint256) virtual public view returns (uint256);
     function activeDebtAuctions(uint256) virtual public view returns (uint256);
