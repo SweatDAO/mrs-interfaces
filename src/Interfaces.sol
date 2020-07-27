@@ -19,7 +19,7 @@ import { GlobalSettlementAbstract } from "./geb/GlobalSettlementAbstract.sol";
 import { ESMAbstract } from "./geb/ESMAbstract.sol";
 import { ETHJoinAbstract } from "./geb/ETHJoinAbstract.sol";
 import { SurplusAuctionHouseAbstract } from "./geb/SurplusAuctionHouseAbstract.sol";
-import { CollateralAuctionHouseAbstract } from "./geb/CollateralAuctionHouseAbstract.sol";
+import { EnglishCollateralAuctionHouseAbstract, FixedDiscountCollateralAuctionHouseAbtract } from "./geb/CollateralAuctionHouseAbstract.sol";
 import { DebtAuctionHouseAbstract } from "./geb/DebtAuctionHouseAbstract.sol";
 import { CollateralJoinAbstract } from "./geb/CollateralJoinAbstract.sol";
 import { TaxCollectorAbstract } from "./geb/TaxCollectorAbstract.sol";

@@ -3,6 +3,8 @@ pragma solidity ^0.6.7;
 // https://github.com/reflexer-labs/esm/blob/master/src/ESM.sol
 abstract contract ESMAbstract {
     function authorizedAccounts(address) virtual public view returns (uint256);
+    function addAuthorization(address) virtual external;
+    function removeAuthorization(address) virtual external;
     function protocolToken() virtual public view returns (address);
     function globalSettlement() virtual public view returns (address);
     function thresholdSetter() virtual public view returns (address);

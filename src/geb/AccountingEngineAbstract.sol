@@ -11,10 +11,8 @@ abstract contract AccountingEngineAbstract {
     function protocolTokenAuthority() virtual public view returns (address);
     function postSettlementSurplusDrain() virtual public view returns (address);
     function debtQueue(uint256) virtual public view returns (uint256);
-    function activeDebtAuctions(uint256) virtual public view returns (uint256);
     function totalQueuedDebt() virtual public view returns (uint256);
     function totalOnAuctionDebt() virtual public view returns (uint256);
-    function activeDebtAuctionsAccumulator() virtual public view returns (uint256);
     function lastSurplusAuctionTime() virtual public view returns (uint256);
     function surplusAuctionDelay() virtual public view returns (uint256);
     function popDebtDelay() virtual public view returns (uint256);

@@ -1,7 +1,7 @@
 pragma solidity ^0.6.7;
 
 // https://github.com/reflexer-labs/geb/blob/master/src/CollateralAuctionHouse.sol
-abstract contract CollateralAuctionHouseAbstract {
+abstract contract EnglishCollateralAuctionHouseAbstract {
     function authorizedAccounts(address) virtual public view returns (uint256);
     function addAuthorization(address usr) virtual external;
     function removeAuthorization(address usr) virtual external;
@@ -15,6 +15,8 @@ abstract contract CollateralAuctionHouseAbstract {
     function bidDuration() virtual public view returns (uint48);
     function totalAuctionLength() virtual public view returns (uint48);
     function auctionsStarted() virtual public view returns (uint256);
+    function AUCTION_TYPE() virtual public view returns (bytes32);
+    function AUCTION_HOUSE_TYPE() virtual public view returns (bytes32);
     function modifyParameters(bytes32, uint256) virtual external;
     function modifyParameters(bytes32, address) virtual external;
     function startAuction(address, address, uint256, uint256, uint256) virtual public returns (uint256);
@@ -23,4 +25,37 @@ abstract contract CollateralAuctionHouseAbstract {
     function decreaseSoldAmount(uint256, uint256, uint256) virtual external;
     function settleAuction(uint256) virtual external;
     function terminateAuctionPrematurely(uint256) virtual external;
+    function bidAmount(uint) virtual public view returns (uint256);
+    function remainingAmountToSell(uint) virtual public view returns (uint256);
+    function forgoneCollateralReceiver(uint) virtual public view returns (address);
+    function amountToRaise(uint) virtual public view returns (uint256);
+}
+
+abstract contract FixedDiscountCollateralAuctionHouseAbtract {
+    function authorizedAccounts(address) virtual public view returns (uint256);
+    function addAuthorization(address) virtual external;
+    function removeAuthorization(address) virtual external;
+    function bids(uint256) virtual public view returns (uint256, uint256, uint256, uint256, uint48, address, address);
+    function cdpEngine() virtual public view returns (address);
+    function oracleRelayer() virtual public view returns (address);
+    function orcl() virtual public view returns (address);
+    function collateralType() virtual public view returns (bytes32);
+    function minimumBid() virtual public view returns (uint256);
+    function totalAuctionLength() virtual public view returns (uint48);
+    function auctionsStarted() virtual public view returns (uint256);
+    function AUCTION_TYPE() virtual public view returns (bytes32);
+    function AUCTION_HOUSE_TYPE() virtual public view returns (bytes32);
+    function modifyParameters(bytes32, uint256) virtual external;
+    function modifyParameters(bytes32, address) virtual external;
+    function getDiscountedRedemptionCollateralPrice(bytes32,uint256) virtual public returns (uint256);
+    function getDiscountedRedemptionBoughtCollateral(uint,bytes32,uint256,uint256) virtual public returns (uint256);
+    function startAuction(address, address, uint256, uint256, uint256) virtual public returns (uint256);
+    function getCollateralBought(uint id, uint amountToBuy, uint wad) virtual external returns (uint256);
+    function buyCollateral(uint, uint, uint) virtual external;
+    function settleAuction(uint256) virtual external;
+    function terminateAuctionPrematurely(uint256) virtual external;
+    function bidAmount(uint) virtual public view returns (uint256);
+    function remainingAmountToSell(uint) virtual public view returns (uint256);
+    function forgoneCollateralReceiver(uint) virtual public view returns (address);
+    function amountToRaise(uint) virtual public view returns (uint256);
 }
