@@ -35,5 +35,6 @@ import { SettlementSurplusAuctioneerAbstract } from "./geb/SettlementSurplusAuct
 import { OracleRelayerAbstract } from "./geb/OracleRelayerAbstract.sol";
 import { CDPEngineAbstract } from "./geb/CDPEngineAbstract.sol";
 import { AccountingEngineAbstract } from "./geb/AccountingEngineAbstract.sol";
+import { GebPrintingPermissionsAbstract } from "./geb/GebPrintingPermissionsAbstract.sol";
 
 import { GebCdpManagerAbstract } from "./geb/GebCdpManagerAbstract.sol";

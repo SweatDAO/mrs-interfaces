@@ -10,6 +10,7 @@ abstract contract ESMAbstract {
     function thresholdSetter() virtual public view returns (address);
     function tokenBurner() virtual public view returns (address);
     function modifyParameters(bytes32, uint256) virtual external;
+    function modifyParameters(bytes32, address) virtual external;
     function triggerThreshold() virtual public view returns (uint256);
     function settled() virtual public view returns (uint256);
     function shutdown() virtual external;

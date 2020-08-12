@@ -10,5 +10,5 @@ abstract contract ChainlinkPriceFeedMedianizerAbstract {
     function modifyParameters(bytes32, uint256) virtual external;
     function getResultWithValidity() virtual public view returns (bytes32, bool);
     function read() virtual public view returns (bytes32);
-    function updateResult() virtual external;
+    function updateResult(address feeReceiver) virtual external;
 }

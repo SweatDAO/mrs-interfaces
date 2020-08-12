@@ -37,7 +37,7 @@ abstract contract UniswapPriceFeedMedianizerAbstract {
     function getObservationListLength() virtual public view returns (uint256, uint256);
     function uniswapComputeAmountOut(uint256,uint256,uint256,uint256) virtual public pure returns (uint256);
     function converterComputeAmountOut(uint256) virtual public view returns (uint256);
-    function updateResult() virtual external;
+    function updateResult(address feeReceiver) virtual external;
     function read() virtual external view returns (uint256);
     function getResultWithValidity() virtual external view returns (uint256, bool);
 }
