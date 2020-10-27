@@ -4,6 +4,18 @@ abstract contract ChainlinkPriceFeedMedianizerAbstract {
     function authorizedAccounts(address) virtual public view returns (uint256);
     function addAuthorization(address) virtual external;
     function removeAuthorization(address) virtual external;
+    function chainlinkAggregator() virtual public view returns (address);
+    function periodSize() virtual public view returns (uint256);
+    function baseUpdateCallerReward() virtual public view returns (uint256);
+    function maxUpdateCallerReward() virtual public view returns (uint256);
+    function maxRewardIncreaseDelay() virtual public view returns (uint256);
+    function perSecondCallerRewardIncrease() virtual public view returns (uint256);
+    function medianPrice() virtual public view returns (uint256);
+    function linkAggregatorTimestamp() virtual public view returns (uint256);
+    function staleThreshold() virtual public view returns (uint256);
+    function treasury() virtual public view returns (address);
+    function treasuryAllowance() virtual public view returns (uint256);
+    function getCallerReward() virtual public view returns (uint256);
     function lastUpdateTime() virtual public view returns (uint256);
     function multiplier() virtual public view returns (uint256);
     function symbol() virtual public view returns (uint256);

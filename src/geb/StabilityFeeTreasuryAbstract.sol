@@ -6,7 +6,7 @@ abstract contract StabilityFeeTreasuryAbstract {
     function addAuthorization(address) virtual external;
     function removeAuthorization(address) virtual external;
     function allowance(address) virtual public view returns (uint256);
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function systemCoin() virtual public view returns (address);
     function coinJoin() virtual public view returns (address);
     function accountingEngine() virtual public view returns (address);

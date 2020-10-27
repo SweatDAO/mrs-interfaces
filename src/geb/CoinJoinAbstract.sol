@@ -5,7 +5,7 @@ abstract contract CoinJoinAbstract {
     function authorizedAccounts(address) virtual public view returns (uint256);
     function addAuthorization(address usr) virtual external;
     function removeAuthorization(address usr) virtual external;
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function systemCoin() virtual public view returns (address);
     function decimals() virtual public view returns (uint256);
     function contractEnabled() virtual public view returns (uint256);

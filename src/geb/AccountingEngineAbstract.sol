@@ -5,12 +5,13 @@ abstract contract AccountingEngineAbstract {
     function authorizedAccounts(address) virtual public view returns (uint256);
     function addAuthorization(address usr) virtual external;
     function removeAuthorization(address usr) virtual external;
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function surplusAuctionHouse() virtual public view returns (address);
     function debtAuctionHouse() virtual public view returns (address);
     function protocolTokenAuthority() virtual public view returns (address);
     function postSettlementSurplusDrain() virtual public view returns (address);
     function debtQueue(uint256) virtual public view returns (uint256);
+    function debtPoppers(uint256) virtual public view returns (address);
     function totalQueuedDebt() virtual public view returns (uint256);
     function totalOnAuctionDebt() virtual public view returns (uint256);
     function lastSurplusAuctionTime() virtual public view returns (uint256);

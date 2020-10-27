@@ -5,6 +5,7 @@ abstract contract CoinAbstract {
     function authorizedAccounts(address) virtual public view returns (uint256);
     function addAuthorization(address) virtual external;
     function removeAuthorization(address) virtual external;
+    function changeData() virtual public view returns (uint256);
     function name() virtual public view returns (string memory);
     function symbol() virtual public view returns (string memory);
     function version() virtual public view returns (string memory);

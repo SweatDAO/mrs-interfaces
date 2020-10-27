@@ -6,7 +6,7 @@ abstract contract EnglishCollateralAuctionHouseAbstract {
     function addAuthorization(address usr) virtual external;
     function removeAuthorization(address usr) virtual external;
     function bids(uint256) virtual public view returns (uint256, uint256, address, uint48, uint48, address, address, uint256);
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function oracleRelayer() virtual public view returns (address);
     function orcl() virtual public view returns (address);
     function bidToMarketPriceRatio() virtual public view returns (uint256);
@@ -36,7 +36,8 @@ abstract contract FixedDiscountCollateralAuctionHouseAbtract {
     function addAuthorization(address) virtual external;
     function removeAuthorization(address) virtual external;
     function bids(uint256) virtual public view returns (uint256, uint256, uint256, uint256, uint48, address, address);
-    function cdpEngine() virtual public view returns (address);
+    function lastReadRedemptionPrice() virtual public view returns (uint256);
+    function safeEngine() virtual public view returns (address);
     function oracleRelayer() virtual public view returns (address);
     function collateralOSM() virtual public view returns (address);
     function collateralMedian() virtual public view returns (address);
@@ -55,10 +56,17 @@ abstract contract FixedDiscountCollateralAuctionHouseAbtract {
     function AUCTION_HOUSE_TYPE() virtual public view returns (bytes32);
     function modifyParameters(bytes32, uint256) virtual external;
     function modifyParameters(bytes32, address) virtual external;
+    function getDiscountedCollateralPrice(uint256, uint256, uint256, uint256) virtual public view returns (uint256);
+    function getFinalTokenPrices(uint256) virtual public view returns (uint256, uint256);
+    function getSystemCoinCeilingDeviatedPrice(uint256) virtual public view returns (uint256);
+    function getSystemCoinFloorDeviatedPrice(uint256) virtual public view returns (uint256);
+    function getSystemCoinMarketPrice() virtual public view returns (uint256);
+    function getCollateralMedianPrice() virtual public view returns (uint256);
+    function getFinalBaseCollateralPrice(uint256, uint256) virtual public view returns (uint256);
     function startAuction(address, address, uint256, uint256, uint256) virtual public returns (uint256);
     function getCollateralBought(uint id, uint wad) virtual external returns (uint256);
+    function getApproximateCollateralBought(uint id, uint wad) virtual external returns (uint256);
     function buyCollateral(uint, uint) virtual external;
-    function settleAuction(uint256) virtual external;
     function terminateAuctionPrematurely(uint256) virtual external;
     function bidAmount(uint) virtual public view returns (uint256);
     function remainingAmountToSell(uint) virtual public view returns (uint256);

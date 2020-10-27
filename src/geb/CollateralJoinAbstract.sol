@@ -5,7 +5,7 @@ abstract contract CollateralJoinAbstract {
     function authorizedAccounts(address) virtual public view returns (uint256);
     function addAuthorization(address) virtual external;
     function removeAuthorization(address) virtual external;
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function collateralType() virtual public view returns (bytes32);
     function collateral() virtual public view returns (address);
     function decimals() virtual public view returns (uint256);

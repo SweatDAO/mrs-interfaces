@@ -19,7 +19,7 @@ abstract contract TaxCollectorAbstract {
     function secondaryReceiverAccounts(uint256) virtual public view returns (address);
     function secondaryReceiverRevenueSources(address) virtual public view returns (uint256);
     function secondaryTaxReceivers(bytes32, uint256) virtual public view returns (TaxReceiver memory);
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function primaryTaxReceiver() virtual public view returns (address);
     function secondaryReceiverNonce() virtual public view returns (uint256);
     function maxSecondaryReceivers() virtual public view returns (uint256);

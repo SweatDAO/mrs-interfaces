@@ -8,7 +8,7 @@ abstract contract DebtAuctionHouseAbstract {
     function AUCTION_HOUSE_TYPE() virtual public view returns (bytes32);
     function activeDebtAuctions() virtual public view returns (uint256);
     function bids(uint256) virtual public view returns (uint256, uint256, address, uint48, uint48);
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function protocolToken() virtual public view returns (address);
     function accountingEngine() virtual public view returns (address);
     function bidDecrease() virtual public view returns (uint256);

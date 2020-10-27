@@ -31,7 +31,12 @@ abstract contract UniswapPriceFeedMedianizerAbstract {
     function lastUpdateTime() virtual public view returns (uint32);
     function windowSize() virtual public view returns (uint256);
     function periodSize() virtual public view returns (uint256);
+    function treasury() virtual public view returns (address);
+    function treasuryAllowance() virtual public view returns (uint256);
+    function getCallerReward() virtual public view returns (uint256);
     function converterFeedScalingFactor() virtual public view returns (uint256);
+    function maxUpdateCallerReward() virtual public view returns (uint256);
+    function maxRewardIncreaseDelay() virtual public view returns (uint256);
     function modifyParameters(bytes32, address) virtual external;
     function observationIndexOf(uint) virtual public view returns (uint8);
     function getObservationListLength() virtual public view returns (uint256, uint256);

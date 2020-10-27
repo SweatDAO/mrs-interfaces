@@ -9,7 +9,7 @@ abstract contract CoinSavingsAccountAbstract {
     function totalSavings() virtual public view returns (uint256);
     function savingsRate() virtual public view returns (uint256);
     function accumulatedRates() virtual public view returns (uint256);
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function accountingEngine() virtual public view returns (address);
     function latestUpdateTime() virtual public view returns (uint256);
     function contractEnabled() virtual public view returns (uint256);

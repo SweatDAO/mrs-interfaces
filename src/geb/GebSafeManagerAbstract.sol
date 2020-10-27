@@ -1,25 +1,25 @@
 pragma solidity ^0.6.7;
 pragma experimental ABIEncoderV2;
 
-// https://github.com/reflexer-labs/geb-cdp-manager/blob/master/src/GebCdpManager.sol
-abstract contract GebCdpManagerAbstract {
+// https://github.com/reflexer-labs/geb-safe-manager/blob/master/src/GebSafeManager.sol
+abstract contract GebSafeManagerAbstract {
     struct List {
         uint prev;
         uint next;
     }
 
-    function cdpEngine() virtual public view returns (address);
-    function cdpi() virtual public view returns (uint256);
-    function cdps(uint256) virtual public view returns (address);
-    function cdpList(uint256) virtual public view returns (List memory);
-    function ownsCDP(uint256) virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
+    function safei() virtual public view returns (uint256);
+    function safes(uint256) virtual public view returns (address);
+    function safeList(uint256) virtual public view returns (List memory);
+    function ownsSAFE(uint256) virtual public view returns (address);
     function collateralTypes(uint256) virtual public view returns (bytes32);
-    function firstCDPID(address) virtual public view returns (uint256);
-    function lastCDPID(address) virtual public view returns (uint256);
-    function cdpCount(address) virtual public view returns (uint256);
-    function cdpCan(address, uint256, address) virtual public view returns (uint256);
+    function firstSAFEID(address) virtual public view returns (uint256);
+    function lastSAFEID(address) virtual public view returns (uint256);
+    function safeCount(address) virtual public view returns (uint256);
+    function safeCan(address, uint256, address) virtual public view returns (uint256);
     function handlerCan(address, address) virtual public view returns (uint256);
-    function allowCDP(
+    function allowSAFE(
         uint256,
         address,
         uint256
@@ -28,15 +28,15 @@ abstract contract GebCdpManagerAbstract {
         address,
         uint256
     ) virtual external;
-    function openCDP(
+    function openSAFE(
         bytes32,
         address
     ) virtual public returns (uint);
-    function transferCDPOwnership(
+    function transferSAFEOwnership(
         uint256,
         address
     ) virtual external;
-    function modifyCDPCollateralization(
+    function modifySAFECollateralization(
         uint256,
         int256,
         int256
@@ -65,11 +65,11 @@ abstract contract GebCdpManagerAbstract {
         address,
         uint
     ) virtual external;
-    function moveCDP(
+    function moveSAFE(
         uint256,
         uint256
     ) virtual external;
-    function protectCDP(
+    function protectSAFE(
         uint256,
         address,
         address

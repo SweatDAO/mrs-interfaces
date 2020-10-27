@@ -7,7 +7,7 @@ abstract contract SettlementSurplusAuctioneerAbstract {
     function removeAuthorization(address) virtual external;
     function accountingEngine() virtual public view returns (address);
     function surplusAuctionHouse() virtual public view returns (address);
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function contractEnabled() virtual public view returns (uint256);
     function lastSurplusAuctionTime() virtual public view returns (uint256);
     function modifyParameters(bytes32, address) virtual external;

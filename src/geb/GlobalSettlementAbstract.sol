@@ -5,7 +5,7 @@ abstract contract GlobalSettlementAbstract {
     function authorizedAccounts(address) virtual public view returns (uint256);
     function addAuthorization(address) virtual external;
     function removeAuthorization(address) virtual external;
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function liquidationEngine() virtual public view returns (address);
     function accountingEngine() virtual public view returns (address);
     function coinSavingsAccount() virtual public view returns (address);
@@ -29,7 +29,7 @@ abstract contract GlobalSettlementAbstract {
     function shutdownSystem() virtual external;
     function freezeCollateralType(bytes32) virtual external;
     function fastTrackAuction(bytes32, uint256) virtual external;
-    function processCDP(bytes32, address) virtual external;
+    function processSAFE(bytes32, address) virtual external;
     function freeCollateral(bytes32) virtual external;
     function setOutstandingCoinSupply() virtual external;
     function calculateCashPrice(bytes32) virtual external;

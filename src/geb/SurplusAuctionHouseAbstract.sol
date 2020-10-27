@@ -7,7 +7,7 @@ abstract contract SurplusAuctionHouseAbstract {
     function removeAuthorization(address) virtual external;
     function AUCTION_HOUSE_TYPE() virtual public view returns (bytes32);
     function bids(uint256) virtual public view returns (uint256, uint256, address, uint48, uint48);
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function protocolToken() virtual public view returns (address);
     function bidIncrease() virtual public view returns (uint256);
     function bidDuration() virtual public view returns (uint48);

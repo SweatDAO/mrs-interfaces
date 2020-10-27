@@ -18,5 +18,4 @@ abstract contract GovernanceLedPriceFeedMedianizerAbstract {
       uint256[] calldata prices_, uint256[] calldata updateTimestamps_,
       uint8[] calldata v, bytes32[] calldata r, bytes32[] calldata s
     ) virtual external;
-
 }

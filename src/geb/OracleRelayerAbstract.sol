@@ -9,7 +9,7 @@ abstract contract OracleRelayerAbstract {
     function liquidationCRatio() virtual public view returns (uint256);
     function orcl(bytes32) virtual public view returns (address);
     function collateralTypes(bytes32) virtual public view returns (address, uint256, uint256);
-    function cdpEngine() virtual public view returns (address);
+    function safeEngine() virtual public view returns (address);
     function redemptionRate() virtual public view returns (uint256);
     function redemptionPrice() virtual public returns (uint256);
     function redemptionPriceUpdateTime() virtual public view returns (uint256);
