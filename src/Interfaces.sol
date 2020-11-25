@@ -10,6 +10,7 @@ import { DSPauseProxyAbstract } from "./dapp/DSPauseProxyAbstract.sol";
 import { DSRolesAbstract } from "./dapp/DSRolesAbstract.sol";
 import { DSSpellAbstract } from "./dapp/DSSpellAbstract.sol";
 import { DSTokenAbstract } from "./dapp/DSTokenAbstract.sol";
+import { DSDelegateTokenAbstract } from "./dapp/DSDelegateTokenAbstract.sol";
 import { DSValueAbstract } from "./dapp/DSValueAbstract.sol";
 
 import { AuthCollateralJoinAbstract } from "./geb/AuthCollateralJoinAbstract.sol";
@@ -20,7 +21,7 @@ import { GlobalSettlementAbstract } from "./geb/GlobalSettlementAbstract.sol";
 import { ESMAbstract } from "./geb/ESMAbstract.sol";
 import { RateSetterAbstract } from "./geb/RateSetterAbstract.sol";
 import { ETHJoinAbstract } from "./geb/ETHJoinAbstract.sol";
-import { SurplusAuctionHouseAbstract } from "./geb/SurplusAuctionHouseAbstract.sol";
+import { RecyclingSurplusAuctionHouseAbstract, BurningSurplusAuctionHouseAbstract } from "./geb/SurplusAuctionHouseAbstract.sol";
 import { EnglishCollateralAuctionHouseAbstract, FixedDiscountCollateralAuctionHouseAbtract } from "./geb/CollateralAuctionHouseAbstract.sol";
 import { DebtAuctionHouseAbstract } from "./geb/DebtAuctionHouseAbstract.sol";
 import { CollateralJoinAbstract } from "./geb/CollateralJoinAbstract.sol";

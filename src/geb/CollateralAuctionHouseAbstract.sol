@@ -25,10 +25,11 @@ abstract contract EnglishCollateralAuctionHouseAbstract {
     function decreaseSoldAmount(uint256, uint256, uint256) virtual external;
     function settleAuction(uint256) virtual external;
     function terminateAuctionPrematurely(uint256) virtual external;
-    function bidAmount(uint) virtual public view returns (uint256);
-    function remainingAmountToSell(uint) virtual public view returns (uint256);
-    function forgoneCollateralReceiver(uint) virtual public view returns (address);
-    function amountToRaise(uint) virtual public view returns (uint256);
+    function bidAmount(uint256) virtual public view returns (uint256);
+    function remainingAmountToSell(uint256) virtual public view returns (uint256);
+    function forgoneCollateralReceiver(uint256) virtual public view returns (address);
+    function amountToRaise(uint256) virtual public view returns (uint256);
+    function raisedAmount(uint256) virtual public view returns (uint256);
 }
 
 abstract contract FixedDiscountCollateralAuctionHouseAbtract {
@@ -72,4 +73,5 @@ abstract contract FixedDiscountCollateralAuctionHouseAbtract {
     function remainingAmountToSell(uint) virtual public view returns (uint256);
     function forgoneCollateralReceiver(uint) virtual public view returns (address);
     function amountToRaise(uint) virtual public view returns (uint256);
+    function raisedAmount(uint256) virtual public view returns (uint256);
 }
